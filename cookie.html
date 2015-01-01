@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>cookie example</title>
+	</head>
+	<body>
+		<script type="text/javascript" src="cookie.js" ></script>
+		<script type="text/javascript">
+			console.log('----------cookie对象-------------');
+			console.log(cookie);
+			
+			console.log('----------对象-------------');
+			console.log(cookie.getCookies());
+			
+			console.log('----------设置cookie-------------');
+			console.log(cookie.set('name', 'wlh'));
+			
+			console.log('----------设置cookie 123-------------');
+			console.log(cookie.set('name', 'wlh123'));
+			
+			console.log('----------设置cookie age-------------');
+			console.log(cookie.set('age', 20));
+			
+			console.log('----------获取cookie-------------');
+			console.log(cookie.get('name'));
+			
+			console.log('----------获取所有-------------');
+			console.log(cookie.getCookies());
+			
+			console.log('----------清除age-------------');
+			console.log(cookie.remove('age'));
+			
+			console.log('----------获取所有-------------');
+			console.log(cookie.getCookies());
+			
+			console.log('----------清除所有-------------');
+			console.log(cookie.clear());
+			
+			console.log('----------获取所有-------------');
+			console.log(cookie.getCookies());
+			
+			console.log('----------解决冲突-------------');
+			var $Cookie = cookie.noConflict(true /*a new name of cookie*/);
+			console.log($Cookie);
+			console.log('----------使用新的命名-------------');
+			console.log($Cookie.getCookies());
+			
+		</script>
+	</body>
+</html>
