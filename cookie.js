@@ -4,7 +4,7 @@
  * cookie绑定在指定的域名下，非本域无法共享cookie，但是可以是在主站共享cookie给子站
  * cookie有一些限制：比如IE6 & IE6- 限定在20个；IE7 50个；Opear 30个...所以一般会根据【必须】需求才设定cookie
  * cookie的名称不分大小写；同时建议将cookie URL编码；路径是区分cookie在不同情况下传递的好方式；带安全标志cookie
- * 		  在SSL情况下发送到服务器端，http则不会。建议针对cookie设置expires、domain、 path；每个cookie小于4KB
+ *     在SSL情况下发送到服务器端，http则不会。建议针对cookie设置expires、domain、 path；每个cookie小于4KB
  * */
 //对cookie的封装，采取getter、setter方式
 (function(global){
