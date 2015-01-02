@@ -74,17 +74,17 @@
 	//解决冲突
 	function noConflict(name){
 		if(name && typeof name === 'string'){
-			if(name && window.cookie){
-				window[name] = window.cookie;
+			if(name && window['cookie']){
+				window[name] = window['cookie'];
 				delete window['cookie'];
 				return window[name];
 			}
 		}else{
-			return window.cookie;
+			return window['cookie'];
 			delete window['cookie'];
 		}
 	}
-	global.cookie = {
+	global['cookie'] = {
 		'getCookies': getCookies,
 		'set': set,
 		'get': get,
