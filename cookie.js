@@ -50,7 +50,7 @@
 	}
 	//获取cookie
 	function get(name){
-		return getCookiesObj()[name] || null;
+		return decodeURIComponent(getCookiesObj()[name]) || null;
 	}
 	
 	//清除某个cookie
